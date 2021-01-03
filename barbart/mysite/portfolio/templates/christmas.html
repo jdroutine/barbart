@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block title %}Boże Narodzenie{% endblock %}
+{% block content %}
+<div class="card-container">
+  <div class="row">
+    {% for christmas in christmas_list  %}
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ christmas.cover.url }}">
+      </div>
+      <div class="card-header">
+        <h2>{{ christmas.title }}</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          {{ christmas.content }}
+        </p>
+        <a href="{% url 'christmas-detail' christmas.pk %}" class="btn">Więcej</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

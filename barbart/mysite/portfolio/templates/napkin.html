@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block title %}Serwety{% endblock %}
+{% block content %}
+<div class="card-container">
+  <div class="row">
+    {% for napkin in napkin_list  %}
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ napkin.cover.url }}">
+      </div>
+      <div class="card-header">
+        <h2>{{ napkin.title }}</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          {{ napkin.content }}
+        </p>
+        <a href="{% url 'napkin-detail' napkin.pk %}" class="btn">Więcej</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

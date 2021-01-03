@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/1bcaf649c2.js"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            <div class="logo-container">
+                <a href="{% url 'home' %}"><h3 class="logo">Barb<span>Art</span></h3></a>
+            </div>
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link">
+                            <a href="{% url 'about' %}">O mnie</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="{% url 'gobelin' %}">Gobeliny</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Szydełko<i class="fas fa-angle-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="{% url 'napkin' %}">Serwety</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="{% url 'tablecloth' %}">Obrusy</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="{% url 'coverlate' %}">Narzuty</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                       <!--<li class="nav-link">
+                            <a href="#">Sutasz</a>
+                        </li>-->
+                        <li class="nav-link">
+                            <a href="#">Ozdoby<i class="fas fa-angle-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="{% url 'christmas' %}">Boże Narodzenie</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="{% url 'easter' %}">Wielkanoc</a>
+                                    </li>
+                                   <!-- <li class="dropdown-link">
+                                        <a href="#">Inne</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link">
+                            <a href="{% url 'contact' %}">Kontakt</a>
+                        </li>
+                        <!--<li class="social-link">
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </li>-->
+                        <li class="social-link">
+                            <a href="https://www.facebook.com/Barb.art.handmade"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="social-link">
+                            <a href="https://www.instagram.com/Barb.art.handmade"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <footer>
+        <a href="http://wszystkoociasteczkach.pl/polityka-cookies/"><h6>Polityka cookies</h6></a>
+        &copy; 2020 by JDRoutine
+    </footer>
+    <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery3.5.1.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/owl.initializer.js' %}"></script>
+    <!--<script src="https://unpkg.com/colcade@0/colcade.js"></script>-->
+</body>
+</html>

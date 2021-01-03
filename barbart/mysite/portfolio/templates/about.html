@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block title %}O mnie{% endblock %}
+{% block content %}
+
+{% for about in about_list  %}
+<div class="about-container">
+    <div class="about-title">
+        <h1>{{about.title}}</h1>
+    </div>
+    <div class="about-content">
+        <p>{{ about.content }}</p>
+    </div>
+</div>   
+{% endfor %}
+    
+{% endblock content %}

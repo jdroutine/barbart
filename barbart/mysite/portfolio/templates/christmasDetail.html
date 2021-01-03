@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block title %}{{ christmas.title }}{% endblock %}
+{% block content %}
+<section>
+    <div>
+      <a class="example-image-link" href="{{ christmas.image1.url }}" data-lightbox="example-set" data-title=""><img class="example-image" src="{{ christmas.image1_cover.url }}" alt=""/></a>
+      <!--<a class="example-image-link" href="{{ christmas.image2.url }}" data-lightbox="example-set" data-title=""><img class="example-image" src="{{ christmas.image2_cover.url }}" alt=""/></a>-->
+    </div>
+  </section>
+{% endblock content %}

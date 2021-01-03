@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block title %}Narzuty{% endblock %}
+{% block content %}
+<div class="card-container">
+  <div class="row">
+    {% for coverlate in coverlate_list  %}
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ coverlate.cover.url }}">
+      </div>
+      <div class="card-header">
+        <h2>{{ coverlate.title }}</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          {{ coverlate.content }}
+        </p>
+        <a href="{% url 'coverlate-detail' coverlate.pk %}" class="btn">Więcej</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
